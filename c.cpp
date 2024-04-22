@@ -18,14 +18,14 @@ public:
         if (month == 2)
         {
             if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) //If the entered year is a leap year//
-                return 29; // Leap year
+                return 29; 
             else
                 return 28; //If the entered year is not leap year//
         }
-        else if (month == 4 || month == 6 || month == 9 || month == 11)
+        else if (month == 4 || month == 6 || month == 9 || month == 11) //Foe even months having 30 days
             return 30;
         else
-            return 31;
+            return 31; //For odd months having 31 days
     }
 
     void displayCalendar()
@@ -59,13 +59,14 @@ public:
 
     int getStartingDay()
     {
-        // Zeller's Congruence algorithm
+        // Zeller's Congruence algorithm for days of week
         int h = (1 + getMonthCode() + getYearCode() + getCenturyCode()) % 7;
         return (h == 0) ? 6 : h - 1; // Convert 0 (Saturday) to 6
     }
 
     int getMonthCode()
     {
+        //Retrun values from getMonthCode 
         static int monthCodes[] = {0, 3, 3, 6, 1, 4, 6, 2, 5, 0, 3, 5};
         return monthCodes[month - 1];
     }
