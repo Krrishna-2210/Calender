@@ -17,10 +17,10 @@ public:
     {
         if (month == 2)
         {
-            if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+            if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) //If the entered year is a leap year//
                 return 29; // Leap year
             else
-                return 28;
+                return 28; //If the entered year is not leap year//
         }
         else if (month == 4 || month == 6 || month == 9 || month == 11)
             return 30;
@@ -103,5 +103,5 @@ int main()
     Calendar cal(year, month);
     cal.displayCalendar();
 
-    return 0;
+    return 0;
 }
