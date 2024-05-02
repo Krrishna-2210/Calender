@@ -1,5 +1,5 @@
 #include <iostream>
-#include <iomanip>
+#include<iomanip>
 using namespace std;
 
 class Calendar
@@ -15,9 +15,9 @@ public:
 
     int getDaysInMonth()
     {
-        if (month == 2)
+        if (month==2)
         {
-            if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) //If the entered year is a leap year//
+            if ((year % 4 ==0 && year %100 != 0) || (year % 400 == 0)) //If the entered year is a leap year//
                 return 29; 
             else
                 return 28; //If the entered year is not leap year//
