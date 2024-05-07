@@ -27,4 +27,40 @@ public:
            else
            return 31;
          }
+    void displayCalendar()
+    {
+        cout << "-----------------------------" << endl;
+        cout << "       " << getMonthName() << " " << year << endl;
+        cout << "-----------------------------" << endl;
+        cout << " Sun Mon Tue Wed Thu Fri Sat" << endl;
+
+        int startingDay = getStartingDay();
+        int daysInMonth = getDaysInMonth();
+
+        int day = 1;
+
+        // Print leading spaces
+        for (int i = 0; i < startingDay; i++)
+        {
+            cout << setw(4) << " ";
+        }
+
+        // Print the days of the month
+        for (int i = 1; i <= daysInMonth; i++)
+        {
+            cout << setw(4) << day++;
+            if ((i + startingDay) % 7 == 0 || i == daysInMonth)
+                cout << endl;
+        }
+
+        cout << "-----------------------------" << endl;
+    }
+
+    int getStartingDay()
+    {
+        // Zeller's Congruence algorithm
+        int h = (1 + getMonthCode() + getYearCode() + getCenturyCode()) % 7;
+        return (h == 0) ? 6 : h - 1; // Convert 0 (Saturday) to 6
+    }
+
 
