@@ -66,7 +66,7 @@ public:
     int getMonthCode()
     {
         static int monthCodes[] = {0, 3, 3, 6, 1, 4, 6, 2, 5, 0, 3, 5};
-        return monthCodes[month - 1];
+        return monthCodes[month-1];
     }
 
 
