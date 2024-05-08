@@ -63,4 +63,10 @@ public:
         return (h == 0) ? 6 : h - 1; // Convert 0 (Saturday) to 6
     }
 
+    int getMonthCode()
+    {
+        static int monthCodes[] = {0, 3, 3, 6, 1, 4, 6, 2, 5, 0, 3, 5};
+        return monthCodes[month - 1];
+    }
+
 
