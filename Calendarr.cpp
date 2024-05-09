@@ -88,7 +88,7 @@ string getMonthName()
  return monthNames[month - 1];
 }
 };
-int mian()
+int main()
 {
         int yeaer, month;
 cout<<"Enter year: ";
