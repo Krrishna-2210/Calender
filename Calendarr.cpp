@@ -20,12 +20,12 @@ public:
            if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
              return 29;  //Leap year
            else
-             return 28;
+             return 28;//Non-leap year
          }
          else if(month == 4 || month == 6 || month == 9 || month == 11)
-           return 30;
+           return 30;//Months having 30 days
            else
-           return 31;
+           return 31;//Months having 31 days
          }
     void displayCalendar()
     {
@@ -68,5 +68,39 @@ public:
         static int monthCodes[] = {0, 3, 3, 6, 1, 4, 6, 2, 5, 0, 3, 5};
         return monthCodes[month-1];
     }
+int getYearCode()
+{
+        intyearCode = year%100;
+return (yearCode + yearCode/4)%7;
+}
+int getCenturyCode()
+{
+        static int centuryCodes[]={0,6,4,2};
+int centuryCodes[century%4];
+}
+
+string getMonthName()
+{
+        static string getMonthName[] = {
+"January" , "February" , "March", "April" , "May" , "June" ,
+  "July" , "August" , "September" , "October" , "November" , "December"
+};
+ return monthNames[month - 1];
+}
+};
+int mian()
+{
+        int yeaer, month;
+cout<<"Enter year: ";
+cin>>year;
+cout<<"Year: ";
+cin>>month;
+
+Calender cal(year , month);
+cal.displayCalender();
+
+return 0 ;
+}
+
 
 
