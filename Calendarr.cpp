@@ -35,7 +35,7 @@ public:
         cout << " Sun Mon Tue Wed Thu Fri Sat" << endl;
 
         int startingDay = getStartingDay();
-        int daysInMonth = getDaysInMonth();
+        int DaysInMonths = getDaysInMonths();
 
         int day = 1;
 
@@ -46,10 +46,10 @@ public:
         }
 
         // Print the days of the month
-        for (int i = 1; i <= daysInMonth; i++)
+        for (int i = 1; i <= DaysInMonths; i++)
         {
             cout << setw(4) << day++;
-            if ((i + startingDay) % 7 == 0 || i == daysInMonth)
+            if ((i + startingDay) % 7 == 0 || i == DaysInMonths)
                 cout << endl;
         }
 
@@ -70,13 +70,14 @@ public:
     }
 int getYearCode()
 {
-        intyearCode = year%100;
+        int yearCode = year%100;
 return (yearCode + yearCode/4)%7;
 }
 int getCenturyCode()
 {
         static int centuryCodes[]={0,6,4,2};
-int centuryCodes[century%4];
+        int century = year / 100;
+        int centuryCodes[century%4];
 }
 
 string getMonthName()
@@ -90,7 +91,7 @@ string getMonthName()
 };
 int main()
 {
-        int yeaer, month;
+        int year, month;
 cout<<"Enter year: ";
 cin>>year;
 cout<<"Year: ";
