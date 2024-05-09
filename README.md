@@ -1,4 +1,4 @@
-This file consists a program which prints the calender by gettint the data from user as input in the form of Year and Month and prints the year calender of the year and month entered by user.\
+This file consists a program which prints the calender by getting the data from user as input in the form of Year and Month and prints the year calender of the year and month entered by user.\
 this program inludes 8 functions namely:
 " int getDaysInMonth()"
 "void displayCalendar()"
