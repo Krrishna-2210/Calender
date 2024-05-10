@@ -49,7 +49,7 @@ public:
         for (int i = 1; i <= daysInMonth; i++)
         {
             cout << setw(4) << day++;
-            if ((i + startingDay) % 7 == 0 || i == daysInMonths)
+            if ((i + startingDay) % 7 == 0 || i == daysInMonth)
                 cout << endl;
         }
 
@@ -97,8 +97,8 @@ int main()
         cout<<"month: ";
         cin>>month;
 
-        Calender cal(year , month);
-        cal.displayCalender();
+        Calendar cal(year , month);
+        cal.displayCalendar();
 
 return 0 ;
 }
