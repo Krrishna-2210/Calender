@@ -13,7 +13,7 @@ public:
           month=m;
         }
 
-       int getDaysInMonths()
+       int getDaysInMonth()
        {
          if(month == 2)
          {
@@ -35,7 +35,7 @@ public:
         cout << " Sun Mon Tue Wed Thu Fri Sat" << endl;
 
         int startingDay = getStartingDay();
-        int DaysInMonths = getDaysInMonths();
+        int daysInMonth = getDaysInMonth();
 
         int day = 1;
 
@@ -46,10 +46,10 @@ public:
         }
 
         // Print the days of the month
-        for (int i = 1; i <= DaysInMonths; i++)
+        for (int i = 1; i <= daysInMonth; i++)
         {
             cout << setw(4) << day++;
-            if ((i + startingDay) % 7 == 0 || i == DaysInMonths)
+            if ((i + startingDay) % 7 == 0 || i == daysInMonths)
                 cout << endl;
         }
 
@@ -71,18 +71,18 @@ public:
 int getYearCode()
 {
         int yearCode = year%100;
-return (yearCode + yearCode/4)%7;
+        return (yearCode + yearCode/4)%7;
 }
 int getCenturyCode()
 {
         static int centuryCodes[]={0,6,4,2};
         int century = year / 100;
-        int centuryCodes[century%4];
+        return centuryCodes[century%4];
 }
 
 string getMonthName()
 {
-        static string getMonthName[] = {
+        static string monthNames[] = {
 "January" , "February" , "March", "April" , "May" , "June" ,
   "July" , "August" , "September" , "October" , "November" , "December"
 };
@@ -92,13 +92,13 @@ string getMonthName()
 int main()
 {
         int year, month;
-cout<<"Enter year: ";
-cin>>year;
-cout<<"Year: ";
-cin>>month;
+        cout<<"Enter year: ";
+        cin>>year;
+        cout<<"month: ";
+        cin>>month;
 
-Calender cal(year , month);
-cal.displayCalender();
+        Calender cal(year , month);
+        cal.displayCalender();
 
 return 0 ;
 }
