@@ -41,6 +41,6 @@ The program:
 ---
 
 ## 👨‍💻 Authors
-Krishna Pradip Patel (23AIML054)
-Hetvi Rabari (23AIML058)
-Unnati Tank (23AIML069)
+Krishna Pradip Patel (23AIML054),
+Hetvi Rabari (23AIML058),
+Unnati Tank (23AIML069).
