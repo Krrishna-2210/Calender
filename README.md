@@ -37,3 +37,10 @@ The program:
 | `getYearCode()`       | Returns year-specific code for Zeller’s formula. |
 | `getCenturyCode()`    | Returns century-specific code for Zeller’s formula. |
 | `getMonthName()`      | Returns the name of the month. |
+
+---
+
+## 👨‍💻 Authors
+Krishna Pradip Patel (23AIML054)
+Hetvi Rabari (23AIML058)
+Unnati Tank (23AIML069)
